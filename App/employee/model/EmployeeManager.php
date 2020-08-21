@@ -53,7 +53,9 @@ class EmployeeManager
 		$id = (int) $id;
 
 		$q = $this->_db->query('DELETE FROM employee WHERE id = '.$id);
-		echo json_encode(['status'=>'success']);
+		if($q){
+			echo 'success';
+		}
 	}
 
 	public function setDb(PDO $db)

@@ -3,7 +3,7 @@
 	view_record();
    //get_record();
     update_record();
-    //delete_record();
+    delete_record();
 })(jQuery)
 
 function tr_factory(data, index){
@@ -104,4 +104,32 @@ function insert_record(){
 				}
 			});
 		});
+	}
+
+	function delete_record(){
+		$(document).on("click", ".delete", function() { 
+			var id=$(this).attr("data-id");
+			$('#id_d').val(id);
+		
+		});
+
+		$(document).on("click", "#delete", function() { 
+		$.ajax({
+			url: "http://localhost/jquery/employee-management-app/App/employee/employeeRouter.php",
+			type: "POST",
+			cache: false,
+			data:{
+				type:3,
+				id: $("#id_d").val()
+			},
+			success: function(dataResult){
+					if(dataResult == 'success'){
+						$('#deleteEmployeeModal').modal('hide');
+						var id = $("#id_d").val();
+					$("#"+id).remove();
+					}
+			
+			}
+		});
+	});
 	}

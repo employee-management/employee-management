@@ -33,7 +33,13 @@
 		$manager = new EmployeeManager($conn);
 		$manager->update($emp);
 	}
-	
+
+	if($type == 3){
+		$id = $_POST['id'];
+		$manager = new EmployeeManager($conn);
+		$manager->delete($id);
+	}
+
 	if($type == 4){
 		$manager = new EmployeeManager($conn);
 		$manager->getList();
