@@ -1,10 +1,23 @@
 (function($){
 	insert_record();
 	view_record();
-   //get_record();
+    get_record();
     update_record();
     delete_record();
 })(jQuery)
+
+function get_record(){
+	$.ajax({
+		data: {type:'5'},
+		url : "http://localhost/jquery/employee-management-app/App/employee/employeeRouter.php",
+		method: 'post',
+		success: function(response)
+		{
+			response = $.parseJSON(response);
+			console.log(response);
+		}
+	});
+}
 
 function tr_factory(data, index){
 	let tr = '<tr id = "'+data.id+'">';

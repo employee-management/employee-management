@@ -44,6 +44,13 @@
 		$manager = new EmployeeManager($conn);
 		$manager->getList();
 	}
+
+	if($type == 5){
+
+		$manager = new EmployeeManager($conn);
+		$e = $manager->get(9);
+		echo json_encode($e);
+	}
 	/*$emp = new Employee([
 		'id'=>3,
 		'name'=>'Albert-Mary',

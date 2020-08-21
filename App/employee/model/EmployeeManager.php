@@ -22,7 +22,8 @@ class EmployeeManager
 
 		$data = $q->fetch(PDO::FETCH_ASSOC);
 
-		echo json_encode($data);
+		//echo json_encode($data);
+		return $data;
 	}
 
 	public function getList()
