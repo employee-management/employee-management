@@ -9,9 +9,9 @@ class EmployeeManager
 
 		$q->execute(array(':name'=>$emp->name(),':email'=>$emp->email(),':phone'=>$emp->phone(),':city'=>$emp->city()));
 		if($q){
-			echo 'success';
+			return 'success';
 		}else{
-			echo 'failed';
+			return 'failed';
 		}
 	}
 

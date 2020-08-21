@@ -8,7 +8,8 @@
 
 function tr_factory(data, index){
 	let tr = '<tr id = "'+data.id+'">';
-	tr += '<td>'+index+'</td>';
+	let i = index+1;
+	tr += '<td>'+i+'</td>';
 	tr += '<td>'+data.name+'</td>';
 	tr += '<td>'+data.email+'</td>';
 	tr += '<td>'+data.phone+'</td>';

@@ -17,7 +17,7 @@
 		
 		$manager = new EmployeeManager($conn);
 		$response = $manager->add($emp);
-			
+		 echo $response;	
 			//echo ($name.'=>'.$email.'=>'.$phone.'=>'.$city);
 	}
 
