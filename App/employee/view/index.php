@@ -33,12 +33,6 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-            <th>
-              <span class="custom-checkbox">
-                <input type="checkbox" id="selectAll">
-                <label for="selectAll"></label>
-              </span>
-            </th>
             <th>SL NO</th>
                         <th>NAME</th>
                         <th>EMAIL</th>
@@ -47,7 +41,7 @@
                         <th>ACTION</th>
                     </tr>
                 </thead>
-        <tbody>
+        <tbody id="t_body">
         
         </tbody>
       </table>

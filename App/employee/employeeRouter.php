@@ -22,8 +22,9 @@
 			//echo ($name.'=>'.$email.'=>'.$phone.'=>'.$city);
 	}
 
-	if($type == 2){
-
+	if($type == 4){
+		$manager = new EmployeeManager($conn);
+		$manager->getList();
 	}
 	/*$emp = new Employee([
 		'id'=>3,
