@@ -45,7 +45,7 @@ class EmployeeManager
 
 		    $q->execute(array(':name'=>$emp->name(),':email'=>$emp->email(),':phone'=>$emp->phone(),':city'=>$emp->city(),
 				':id'=>$emp->id()));
-		    echo json_encode(['status'=>'success']);
+		    echo 'success';
 	}
 
 	public function delete($id)

@@ -1,9 +1,9 @@
 (function($){
 	insert_record();
 	view_record();
-    /*get_record();
+   //get_record();
     update_record();
-    delete_record();*/
+    //delete_record();
 })(jQuery)
 
 function tr_factory(data, index){
@@ -61,7 +61,7 @@ function insert_record(){
 					if(dataResult == 'success'){
 						$('#addEmployeeModal').modal('hide');
 						alert('Data added successfully !'); 
-                       // location.reload();						
+                        location.reload();						
 					}
 					else {
 					   alert(dataResult);
@@ -69,4 +69,39 @@ function insert_record(){
 			}
 		});
 	});
+	}
+
+	function update_record(){
+		$(document).on('click','.update',function(e){
+			var id=$(this).attr("data-id");
+			var name=$(this).attr("data-name");
+			var email=$(this).attr("data-email");
+			var phone=$(this).attr("data-phone");
+			var city=$(this).attr("data-city");
+			$('#id_u').val(id);
+			$('#name_u').val(name);
+			$('#email_u').val(email);
+			$('#phone_u').val(phone);
+			$('#city_u').val(city);
+		});
+
+		$(document).on('click','#update',function(e){
+			var data = $("#update_form").serialize();
+			$.ajax({
+				data:data,
+				type:"post",
+				url:"http://localhost/jquery/employee-management-app/App/employee/employeeRouter.php",
+				success: function(dataResult){
+					//var dataResult = $.parseJSON(dataResult);
+					if(dataResult == 'success'){
+						$('#editEmployeeModal').modal('hide');
+						alert('Data updated successfully !'); 
+                        location.reload();	
+
+					}else{
+						alert(dataResult);
+					}
+				}
+			});
+		});
 	}

@@ -9,7 +9,6 @@
 		if($type == 1){
 
 			$emp = new Employee([
-			'id'=>3,
 			'name'=>$_POST['name'],
 			'email'=>$_POST['email'],
 			'phone'=>$_POST['phone'],
@@ -22,6 +21,19 @@
 			//echo ($name.'=>'.$email.'=>'.$phone.'=>'.$city);
 	}
 
+	if($type == 2){
+		$emp = new Employee([
+			'id'=>$_POST['id'],
+			'name'=>$_POST['name'],
+			'email'=>$_POST['email'],
+			'phone'=>$_POST['phone'],
+			'city'=>$_POST['city']
+		]);
+
+		$manager = new EmployeeManager($conn);
+		$manager->update($emp);
+	}
+	
 	if($type == 4){
 		$manager = new EmployeeManager($conn);
 		$manager->getList();
