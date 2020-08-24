@@ -1,7 +1,7 @@
 (function($){
 	insert_record();
 	view_record();
-    get_record();
+    //get_record();
     update_record();
     delete_record();
 })(jQuery)
