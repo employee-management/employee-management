@@ -5,7 +5,7 @@
 
 	global $conn;
 	$type =  $_POST['type'];
-	//echo ($type);
+	//echo Merde Albert!!!!!!!!!!!
 		if($type == 1){
 
 			$emp = new Employee([
