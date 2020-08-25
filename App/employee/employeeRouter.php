@@ -8,6 +8,7 @@
 	//echo Merde Albert!!!!!!!!!!!
 	//echo merde Steff
 	//echo merde chilles
+	//echo "I'm here to hack you"
 			if($type == 1){
 
 			$emp = new Employee([
