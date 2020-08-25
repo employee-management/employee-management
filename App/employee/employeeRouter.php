@@ -5,8 +5,10 @@
 
 	global $conn;
 	$type =  $_POST['type'];
-	
-		if($type == 1){
+	//echo Merde Albert!!!!!!!!!!!
+	//echo merde Steff
+	//echo merde chilles
+			if($type == 1){
 
 			$emp = new Employee([
 			'name'=>$_POST['name'],
