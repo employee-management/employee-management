@@ -7,7 +7,8 @@
 	$type =  $_POST['type'];
 	//echo Merde Albert!!!!!!!!!!!
 	//echo merde Steff
-		if($type == 1){
+	//echo merde chilles
+			if($type == 1){
 
 			$emp = new Employee([
 			'name'=>$_POST['name'],
