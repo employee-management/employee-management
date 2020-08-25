@@ -9,6 +9,7 @@
 	//echo merde Steff
 	//echo merde chilles
 	//echo "I'm here to hack you"
+    //echo Aristilde
 			if($type == 1){
 
 			$emp = new Employee([
@@ -17,10 +18,10 @@
 			'phone'=>$_POST['phone'],
 			'city'=>$_POST['city']
 		]);
-		
+
 		$manager = new EmployeeManager($conn);
 		$response = $manager->add($emp);
-		 echo $response;	
+		 echo $response;
 			//echo ($name.'=>'.$email.'=>'.$phone.'=>'.$city);
 	}
 
@@ -70,7 +71,7 @@
 	]);
 	$manager = new EmployeeManager($conn);
 	//$manager->add($emp);
-	//$manager->add($emp1);	
+	//$manager->add($emp1);
 	//$manager->get(3);
 	//$manager->update($emp);
 	//$manager->delete(3);
